@@ -83,4 +83,9 @@ namespace Catalog
         void AddPriceList(string price);
         event EventHandler<EventArgs> UpdateContent;
     }
+
+    public interface IPaymentGateway
+    {
+        void ProcessPayment(decimal amount);
+    }
 }
